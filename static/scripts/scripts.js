@@ -1,23 +1,12 @@
 const bars = document.querySelector('#bars');
-const bars_links = document.querySelector('.navbar__links');
+const hidebars = document.querySelector('.hide__bars');
 
-function toggleBarsLinks() {
-    if (bars_links.style.display === "flex") {
-        bars_links.style.display = "none";
+bars.addEventListener('click', () => {
+    if(hidebars.classList.contains('active')){
+        hidebars.classList.remove('active');
     } else {
-        bars_links.style.display = "flex";
+        hidebars.classList.add('active');
     }
-}
+});
 
-function checkWindowSize() {
-    if (window.innerWidth >= 768) {
-        bars_links.style.display = "flex"; 
-    } else {
-        bars_links.style.display = "none"; 
-    }
-}
-
-bars.addEventListener('click', toggleBarsLinks);
-window.addEventListener('resize', checkWindowSize);
-
-checkWindowSize();
+// active
