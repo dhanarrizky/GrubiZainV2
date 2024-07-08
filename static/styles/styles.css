@@ -6,7 +6,7 @@
 }
 
 .navbar {
-  background-color: aqua;
+  background-color: #FFFFFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,11 +20,11 @@
   font-weight: bold;
 }
 .navbar__bars {
-  opacity: 0;
+  display: none;
 }
 @media screen and (max-width: 768px) {
   .navbar__bars {
-    opacity: 1;
+    display: block;
     transition: all 0.3 ease;
   }
   .navbar__bars a i {
@@ -62,5 +62,26 @@
 @media screen and (max-width: 768px) {
   .navbar__links {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    position: inherit;
+    top: 50px;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    background-color: #FFFFFF;
+    height: 0px;
   }
+  .navbar__links li {
+    margin: 10px 0;
+  }
+  .navbar__links.show_bars {
+    height: 100%;
+    display: flex;
+  }
+}
+
+main {
+  background-color: black;
+  height: 100vh;
 }/*# sourceMappingURL=styles.css.map */
