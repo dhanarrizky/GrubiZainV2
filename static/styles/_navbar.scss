@@ -1,0 +1,71 @@
+@import 'colors';
+@import 'media-queries';
+
+.navbar {
+    background-color: aqua;
+    // background-color: $light;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    padding: 0 24px;
+    font-size: 24px;
+    position: absolute;
+
+    &__logo {
+        font-weight: bold;
+    }
+
+    &__bars {
+        opacity: 0;
+        
+        @include tablet {
+            opacity: 1;
+            transition: all 0.3 ease;
+            
+            & a i {
+                color: $darkOne;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        list-style: none;
+
+        li {
+            padding: 4px 12px;
+    
+            a {
+                color: $darkOne;
+                font-family: 'Times New Roman', Times, serif;
+                text-decoration: none;
+    
+                &.active {
+                    color: $primary;
+                    border-bottom: 2px solid $primary;
+                }
+
+                &:hover {
+                    color: $secondary;
+                }
+            }
+
+            #btn {
+                background-color: $primary;
+                color: $light;
+                padding: 4px 14px;
+                border-radius: 13px;
+
+                &:hover {
+                    background-color: $secondary;
+                }
+            }
+        }
+
+        @include tablet {
+            display: none;
+        }
+    }
+}
