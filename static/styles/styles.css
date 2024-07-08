@@ -37,15 +37,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 100px;
   width: 100%;
   padding: 0 24px;
   font-size: 24px;
   position: absolute;
+  top: 0;
   z-index: 3;
 }
-.navbar__logo {
-  font-weight: bold;
+.navbar__logo img {
+  height: 80px;
 }
 .navbar__bars {
   opacity: 0;
@@ -88,11 +89,14 @@
   align-items: center;
 }
 .hide__bars.active {
-  top: 80px;
+  top: 100px;
   transition: all 0.8s ease;
 }
 
 main {
-  background-color: black;
-  height: 100vh;
+  margin-top: 100px;
+}
+main h1 {
+  padding-top: 120px;
+  background-color: aqua;
 }/*# sourceMappingURL=styles.css.map */

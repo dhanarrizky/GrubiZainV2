@@ -9,6 +9,6 @@
 @import 'navbar';
 
 main {
-    background-color: black;
-    height: 100vh;
+    margin-top: 100px; 
+    @import 'home-section';
 }
