@@ -10,5 +10,7 @@
 
 main {
     margin-top: 100px; 
-    @import 'home-section';
+    padding: 0 50px;
+
+    @import 'home-container';
 }

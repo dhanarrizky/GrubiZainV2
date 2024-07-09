@@ -1,0 +1,98 @@
+.home {
+    // background-color: blueviolet;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        height: 88vh;
+        // justify-items: center;
+        
+        @include tablet {
+            height: 44rem;
+            grid-template-columns: 1fr;
+            align-items: start;
+        }
+        
+        &--left {
+            // background-color: aqua  ;
+            width: 80%;
+
+            h1 {
+                color: $primary;
+                font-size: 50px;
+                margin: 15px;
+            }
+            
+            h2 {
+                font-size: 50px;
+                margin: 15px;
+            }
+            
+            p {
+                width: 80%;
+                margin: 15px;
+            }
+
+            @include tablet {
+                h1, h2 {
+                    font-size: 40px;
+                }
+            }
+            
+            #btn {
+                margin: 15px;
+                background-color: $primary;
+                border: none;
+                outline: none;
+                padding: 14px 24px;
+                border-radius: 25px;
+
+                a {
+                    color: white;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    background-color: $secondary;
+                }
+            }
+        }
+
+        &--right {
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // background-color: black;
+
+            .img-1 {
+                position: absolute;
+                height: 500px;
+            }
+
+            .img-2 {
+                position: absolute;
+                height: 150px;
+                bottom: 60px;
+                right: 60px;
+            }
+
+            @include tablet {
+                .img-1 {
+                    height: 350px;
+                    bottom: 40px;
+                    right: 40px;
+                }
+    
+                .img-2 {
+                    height: 100px;
+                    bottom: 0px;
+                    right: 0px;
+                }
+            }
+        }
+    }
+}
