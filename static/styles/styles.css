@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Kumb Sans", sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 .hide__bars li, .navbar__links li {
@@ -94,18 +96,19 @@
 }
 
 main {
+  background-color: aqua;
   margin-top: 100px;
   padding: 0 50px;
 }
 main .home {
-  background-color: blueviolet;
-  margin: 50px 0px;
+  height: 100%;
+  width: 100%;
+  background-color: black;
 }
 main .home__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  height: 88vh;
 }
 @media screen and (max-width: 790px) {
   main .home__container {
@@ -193,7 +196,9 @@ main .about__container--title {
   padding: 20px 0px;
 }
 main .about {
-  margin: 50px 0px;
+  margin: 50px 0;
+  height: 100%;
+  max-width: 1200px;
 }
 main .about__container--content {
   padding: 10px 0;

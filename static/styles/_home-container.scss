@@ -1,13 +1,12 @@
 .home {
-    background-color: blueviolet;
-    margin: 50px 0px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
 
     &__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
-        height: 88vh;
-        // justify-items: center;
         
         @include tablet {
             height: 44rem;
@@ -16,7 +15,6 @@
         }
         
         &--left {
-            // background-color: aqua  ;
             width: 80%;
 
             h1 {
@@ -69,7 +67,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            // background-color: black;
 
             .img-1 {
                 position: absolute;
