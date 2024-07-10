@@ -96,14 +96,12 @@
 }
 
 main {
-  background-color: aqua;
   margin-top: 100px;
   padding: 0 50px;
 }
 main .home {
   height: 100%;
   width: 100%;
-  background-color: black;
 }
 main .home__container {
   display: grid;
@@ -198,7 +196,7 @@ main .about__container--title {
 main .about {
   margin: 50px 0;
   height: 100%;
-  max-width: 1200px;
+  width: 100%;
 }
 main .about__container--content {
   padding: 10px 0;

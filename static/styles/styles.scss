@@ -11,10 +11,11 @@
 @import 'navbar';
 
 main {
-    background-color: aqua;
+    // background-color: aqua;
     margin-top: 100px; 
     padding: 0 50px;
 
     @import 'home-container';
     @import 'about-container';
+    @import 'products-container';
 }
