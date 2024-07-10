@@ -1,5 +1,6 @@
 .home {
-    // background-color: blueviolet;
+    background-color: blueviolet;
+    margin: 50px 0px;
 
     &__container {
         display: grid;
@@ -32,6 +33,7 @@
             p {
                 width: 80%;
                 margin: 15px;
+                line-height: 1.2;
             }
 
             @include tablet {

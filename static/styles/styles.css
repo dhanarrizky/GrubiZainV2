@@ -97,6 +97,10 @@ main {
   margin-top: 100px;
   padding: 0 50px;
 }
+main .home {
+  background-color: blueviolet;
+  margin: 50px 0px;
+}
 main .home__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -125,6 +129,7 @@ main .home__container--left h2 {
 main .home__container--left p {
   width: 80%;
   margin: 15px;
+  line-height: 1.2;
 }
 @media screen and (max-width: 790px) {
   main .home__container--left h1, main .home__container--left h2 {
@@ -177,4 +182,34 @@ main .home__container--right .img-2 {
   main .home__container--right .img-2 {
     height: 100px;
   }
+}
+main .about__container--title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 45px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+}
+main .about {
+  margin: 50px 0px;
+}
+main .about__container--content {
+  padding: 10px 0;
+}
+main .about__container--content img {
+  float: right;
+  height: 500px;
+  padding: 20px;
+}
+@media screen and (max-width: 790px) {
+  main .about__container--content img {
+    height: 400px;
+  }
+}
+main .about__container--content p {
+  font-size: large;
+  padding: 10px 0;
+  line-height: 1.5;
 }/*# sourceMappingURL=styles.css.map */

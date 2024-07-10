@@ -1,0 +1,43 @@
+%title-section {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    // background-color: black;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.about {
+    // background-color: blueviolet;
+    margin: 50px 0px;
+
+    &__container {
+        // background-color: aqua;
+
+        &--title {
+            @extend %title-section;
+        }
+
+        &--content {
+            padding: 10px 0;
+
+            img {
+                float: right;
+                height: 500px;
+                padding: 20px;
+
+                @include tablet {
+                    height: 400px;
+                }
+            }
+
+            p {
+                font-size: large;
+                padding: 10px 0;
+                line-height: 1.5;
+            }
+        }
+    }
+}
