@@ -1,0 +1,20 @@
+.our-company {
+    height: 100%;
+    width: 100%;
+    // background-color: aqua;
+
+    &__container {
+        &--title {
+            @extend %title-section;
+        }
+
+        &--content {
+            padding: 10px 0;
+            
+            p {
+                font-size: large;
+                line-height: 1.5;
+            }
+        }
+    }
+}

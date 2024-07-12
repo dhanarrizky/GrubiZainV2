@@ -184,7 +184,7 @@ main .home__container--right .img-2 {
     height: 100px;
   }
 }
-main .about__container--title {
+main .our-company__container--title, main .about__container--title {
   font-family: "Times New Roman", Times, serif;
   font-size: 45px;
   color: black;
@@ -201,6 +201,11 @@ main .about {
 main .about__container--content {
   padding: 10px 0;
 }
+main .about__container--content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 main .about__container--content img {
   float: right;
   height: 500px;
@@ -214,5 +219,16 @@ main .about__container--content img {
 main .about__container--content p {
   font-size: large;
   padding: 10px 0;
+  line-height: 1.5;
+}
+main .our-company {
+  height: 100%;
+  width: 100%;
+}
+main .our-company__container--content {
+  padding: 10px 0;
+}
+main .our-company__container--content p {
+  font-size: large;
   line-height: 1.5;
 }/*# sourceMappingURL=styles.css.map */
