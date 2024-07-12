@@ -224,14 +224,24 @@ main .about__container--content p {
 main .products {
   height: auto;
   width: 100%;
+  margin: 50px 0;
 }
 main .products__container {
   margin: 20px 0;
+}
+main .products__container--title {
+  margin-bottom: 30px;
 }
 main .products__container--content {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10vh;
+}
+main .products__container--content::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 main .our-company {
   height: 100%;
