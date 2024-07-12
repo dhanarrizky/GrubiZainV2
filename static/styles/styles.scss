@@ -8,6 +8,14 @@
     // background-color: aqua;
 }
 
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
 @import 'navbar';
 
 main {

@@ -184,7 +184,7 @@ main .home__container--right .img-2 {
     height: 100px;
   }
 }
-main .our-company__container--title, main .about__container--title {
+main .our-company__container--title, main .products__container--title, main .about__container--title {
   font-family: "Times New Roman", Times, serif;
   font-size: 45px;
   color: black;
@@ -220,6 +220,18 @@ main .about__container--content p {
   font-size: large;
   padding: 10px 0;
   line-height: 1.5;
+}
+main .products {
+  height: auto;
+  width: 100%;
+}
+main .products__container {
+  margin: 20px 0;
+}
+main .products__container--content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main .our-company {
   height: 100%;

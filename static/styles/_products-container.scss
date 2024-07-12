@@ -1,0 +1,19 @@
+.products {
+    height: auto;
+    width: 100%;
+
+    &__container {
+        margin: 20px 0;
+
+        &--title {
+            @extend %title-section;
+        }
+
+        &--content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+}
