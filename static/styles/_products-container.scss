@@ -4,20 +4,52 @@
     margin: 50px 0;
 
     &__container {
-        margin: 20px 0;
-
+        background-color: aqua;
+        
         &--title {
             @extend %title-section;
-            margin-bottom: 30px;
         }
 
         &--content {
-            @include clearfix();
             display: flex;
-            justify-content: center;
             align-items: center;
-            margin-bottom: 10vh;
+            justify-content: center;
+
+            .slider-wrapper {
+                width: 95%;
+                overflow-x: auto;
+                position: relative;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                
+                .image-list {
+                    display: flex;
+                    gap: 7px;
+
+                    
+                    .img-content {
+                        position: relative;
+                        height: 300px;
+                        width: 200px;
+                        margin-right: 10px; // Menambahkan margin untuk memberi ruang saat di-hover
+
+                        img {
+                            background-color: beige;
+                            height: inherit;
+                            width: inherit;
+                            object-fit: cover;
+                            transition: transform 0.3s ease; // Menambahkan animasi untuk transisi yang lebih halus
+
+                            &:hover {
+                                transform: scale(1.1); // Menambahkan skala untuk efek hover
+                                z-index: 4; // Memastikan gambar di-hover berada di depan gambar lain
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
-
 }

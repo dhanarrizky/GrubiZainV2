@@ -243,21 +243,42 @@ main .products {
   margin: 50px 0;
 }
 main .products__container {
-  margin: 20px 0;
-}
-main .products__container--title {
-  margin-bottom: 30px;
+  background-color: aqua;
 }
 main .products__container--content {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 10vh;
+  justify-content: center;
 }
-main .products__container--content::after {
-  content: "";
-  display: table;
-  clear: both;
+main .products__container--content .slider-wrapper {
+  width: 95%;
+  overflow-x: auto;
+  position: relative;
+}
+main .products__container--content .slider-wrapper::-webkit-scrollbar {
+  display: none;
+}
+main .products__container--content .slider-wrapper .image-list {
+  display: flex;
+  gap: 7px;
+}
+main .products__container--content .slider-wrapper .image-list .img-content {
+  position: relative;
+  height: 300px;
+  width: 200px;
+  margin-right: 10px;
+}
+main .products__container--content .slider-wrapper .image-list .img-content img {
+  background-color: beige;
+  height: inherit;
+  width: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+main .products__container--content .slider-wrapper .image-list .img-content img:hover {
+  transform: scale(1.1);
+  z-index: 4;
 }
 main .our-company {
   height: 100%;
