@@ -105,90 +105,68 @@ main {
 main .home {
   height: 100%;
   width: 100%;
+  padding: 100px 0;
   display: flex;
   justify-content: center;
 }
 main .home__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  margin: 100px 0;
 }
-@media screen and (max-width: 790px) {
-  main .home__container {
-    height: 44rem;
-    grid-template-columns: 1fr;
-    align-items: start;
-  }
+main .home__container--left, main .home__container--right {
+  flex: 1 1 45%;
 }
-main .home__container--left {
+main .home__container--left .left_container, main .home__container--right .left_container {
   width: 80%;
+  line-height: 1.1;
 }
-main .home__container--left h1 {
+main .home__container--left .left_container h1, main .home__container--left .left_container h2, main .home__container--right .left_container h1, main .home__container--right .left_container h2 {
+  font-size: 45px;
+}
+main .home__container--left .left_container h1, main .home__container--right .left_container h1 {
   color: #FC8A22;
-  font-size: 50px;
-  margin: 15px;
 }
-main .home__container--left h2 {
-  font-size: 50px;
-  margin: 15px;
+main .home__container--left .left_container p, main .home__container--right .left_container p {
+  width: 70%;
+  line-height: 1.5;
 }
-main .home__container--left p {
-  width: 80%;
-  margin: 15px;
-  line-height: 1.2;
-}
-@media screen and (max-width: 790px) {
-  main .home__container--left h1, main .home__container--left h2 {
-    font-size: 40px;
-  }
-}
-main .home__container--left #btn {
-  margin: 15px;
+main .home__container--left .left_container button, main .home__container--right .left_container button {
   background-color: #FC8A22;
   border: none;
   outline: none;
-  padding: 14px 24px;
   border-radius: 25px;
+  padding: 15px 20px;
+  margin-top: 30px;
 }
-main .home__container--left #btn a {
+main .home__container--left .left_container button a, main .home__container--right .left_container button a {
+  text-decoration: none;
   color: white;
   font-weight: bold;
-  text-decoration: none;
 }
-main .home__container--left #btn:hover {
+main .home__container--left .left_container button:hover, main .home__container--right .left_container button:hover {
   background-color: #ffa44f;
 }
-main .home__container--right {
-  height: 500px;
-  width: 600px;
-  position: relative;
+main .home__container--left .right_container, main .home__container--right .right_container {
+  height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
-}
-main .home__container--right .img-1 {
-  position: absolute;
-  height: 500px;
   right: 0;
-  bottom: 0;
 }
-main .home__container--right .img-2 {
+main .home__container--left .right_container .img-container, main .home__container--right .right_container .img-container {
+  position: relative;
+  height: 500px;
+  width: 500px;
+}
+main .home__container--left .right_container .img-container .img-1, main .home__container--right .right_container .img-container .img-1 {
+  height: 500px;
+}
+main .home__container--left .right_container .img-container .img-2, main .home__container--right .right_container .img-container .img-2 {
+  height: 130px;
   position: absolute;
-  height: 150px;
-  right: -30px;
   bottom: -30px;
-}
-@media screen and (max-width: 790px) {
-  main .home__container--right {
-    height: 100%;
-  }
-  main .home__container--right .img-1 {
-    height: 350px;
-  }
-  main .home__container--right .img-2 {
-    height: 100px;
-  }
+  right: -30px;
 }
 main .our-company__container--title, main .products__container--title, main .about__container--title {
   font-family: "Times New Roman", Times, serif;

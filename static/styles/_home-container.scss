@@ -1,99 +1,77 @@
 .home {
     height: 100%;
     width: 100%;
-    // background-color: aqua;
+    padding: 100px 0;
     display: flex;
     justify-content: center;
 
     &__container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        margin: 100px 0;
-        
-        @include tablet {
-            height: 44rem;
-            grid-template-columns: 1fr;
-            align-items: start;
-        }
-        
-        &--left {
-            width: 80%;
 
-            h1 {
-                color: $primary;
-                font-size: 50px;
-                margin: 15px;
-            }
-            
-            h2 {
-                font-size: 50px;
-                margin: 15px;
-            }
-            
-            p {
+        &--left, &--right {
+            flex: 1 1 45%; // Menggunakan flex-basis agar elemen dapat dibungkus
+
+            .left_container {
                 width: 80%;
-                margin: 15px;
-                line-height: 1.2;
-            }
+                line-height: 1.1;;
 
-            @include tablet {
                 h1, h2 {
-                    font-size: 40px;
-                }
-            }
-            
-            #btn {
-                margin: 15px;
-                background-color: $primary;
-                border: none;
-                outline: none;
-                padding: 14px 24px;
-                border-radius: 25px;
-
-                a {
-                    color: white;
-                    font-weight: bold;
-                    text-decoration: none;
+                    font-size: 45px;
                 }
 
-                &:hover {
-                    background-color: $secondary;
+                h1 {
+                    color: $primary;
+                }
+
+                p {
+                    width: 70%;
+                    line-height: 1.5;
+                }
+
+                button {
+                    background-color: $primary;
+                    border: none;
+                    outline: none;
+                    border-radius: 25px;
+                    padding: 15px 20px;
+                    margin-top: 30px;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-weight: bold;
+                    }
+
+                    &:hover {
+                        background-color: $secondary;
+                    }
                 }
             }
-        }
 
-        &--right {
-            height: 500px;
-            width: 600px;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .img-1 {
-                position: absolute;
-                height: 500px;
-                right: 0;
-                bottom: 0;
-            }
-
-            .img-2 {
-                position: absolute;
-                height: 150px;
-                right: -30px;
-                bottom: -30px;
-            }
-
-            @include tablet {
+            .right_container {
                 height: 100%;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                right: 0;
 
-                .img-1 {
-                    height: 350px;
-                }
-    
-                .img-2 {
-                    height: 100px;
+                .img-container {
+                    position: relative;
+                    height: 500px;
+                    width: 500px;
+
+                    .img-1 {
+                        height: 500px;
+                    }
+
+                    .img-2 {
+                        height: 130px;
+                        position: absolute;
+                        bottom: -30px;
+                        right: -30px;
+                    }
                 }
             }
         }
