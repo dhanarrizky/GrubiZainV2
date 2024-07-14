@@ -1,12 +1,15 @@
 .home {
     height: 100%;
     width: 100%;
-    // background-color: black;
+    // background-color: aqua;
+    display: flex;
+    justify-content: center;
 
     &__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
+        margin: 100px 0;
         
         @include tablet {
             height: 44rem;

@@ -35,72 +35,77 @@
     }
 }
 
-.navbar {
-    // background-color: aqua;
-    background-color: $light;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
+    position: fixed;
     height: 100px;
     width: 100%;
-    padding: 0 24px;
-    font-size: 24px;
-    position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 10;
 
-    &__logo img{
-        height: 80px;
-    }
-
-    &__bars {
-        opacity: 0;
-        
-        @include tablet {
-            opacity: 1;
-            transition: all 0.5s ease;
+    .navbar {
+        // background-color: aqua;
+        background-color: $light;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+        font-size: 24px;
+        z-index: 10;
+    
+        &__logo img{
+            height: 80px;
+        }
+    
+        &__bars {
+            opacity: 0;
             
-            & a i {
-                color: $darkOne;
+            @include tablet {
+                opacity: 1;
+                transition: all 0.5s ease;
+                
+                & a i {
+                    color: $darkOne;
+                }
+            }
+        }
+    
+        &__links {
+            display: flex;
+    
+            @extend %links_item;
+    
+            @include tablet {
+               display: none;
+               transition: all 0.5s ease;
             }
         }
     }
-
-    &__links {
+    
+    .hide__bars {
+        border-top: 2px solid $primary;
+        background-color: $light;
+        position: absolute;
+        height: 300px;
+        // top: 80px;
+        top: -500px;
+        left: 0;
+        right: 0;
         display: flex;
-
-        @extend %links_item;
-
-        @include tablet {
-           display: none;
-           transition: all 0.5s ease;
-        }
-    }
-}
-
-.hide__bars {
-    border-top: 2px solid $primary;
-    background-color: $light;
-    position: absolute;
-    height: 300px;
-    // top: 80px;
-    top: -500px;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    transition: all 1s ease-in-out;
-
-    @extend %links_item;
-    ul {
-        display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: center;
-    }
-
-    &.active {
-        top: 100px;
-        transition: all 0.8s ease;
+        transition: all 1s ease-in-out;
+        z-index: -1;
+    
+        @extend %links_item;
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        &.active {
+            top: 85px;
+            transition: all 0.8s ease;
+        }
     }
 }

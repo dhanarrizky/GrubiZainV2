@@ -19,7 +19,7 @@
                 <img src="./static/img/logo.png" alt="Grubi Zain Logo" class="navbar__logo--logo">
             </div>
             <div class="navbar__bars">
-                <a href="#" id="bars"><i class="fas fa-bars"></i></a>
+                <a id="bars"><i class="fas fa-bars"></i></a>
             </div>
             <ul class="navbar__links">
                 <li class="navbar_link--links"><a href="#home-section" class="active">Home</a></li>
@@ -29,14 +29,16 @@
                 <li class="navbar_link--links"><a href="#" id="btn">Contact Us</a></li>
             </ul>
         </nav>
-        <div class="hide__bars">
-            <ul class="hide__bars__links">
-                <li class="navbar_link--links"><a href="#home-section" class="active">Home</a></li>
-                <li class="navbar_link--links"><a href="#about-section">About</a></li>
-                <li class="navbar_link--links"><a href="#products-section">Products</a></li>
-                <li class="navbar_link--links"><a href="#our-company-section">Our Company</a></li>
-                <li class="navbar_link--links"><a href="#" id="btn">Contact Us</a></li>
-            </ul>
+        <div class="relative-hidebar">
+            <div class="hide__bars">
+                <ul class="hide__bars__links">
+                    <li class="navbar_link--links"><a href="#home-section" class="active">Home</a></li>
+                    <li class="navbar_link--links"><a href="#about-section">About</a></li>
+                    <li class="navbar_link--links"><a href="#products-section">Products</a></li>
+                    <li class="navbar_link--links"><a href="#our-company-section">Our Company</a></li>
+                    <li class="navbar_link--links"><a href="#" id="btn">Contact Us</a></li>
+                </ul>
+            </div>
         </div>
     </header>
     <main>
@@ -79,7 +81,7 @@
                     <div class="products__container--content">
                         <div class="Products__container_content">
                             <div class="slider-wrapper">
-                                <button id="prev-slide" class="slide-button">left</button>
+                                <button id="prev-slide" class="slide-button"><i class="fas fa-chevron-left"></i></button>
                                 <div class="image-list">
                                     <img src="./static/img/product/product_1.JPG" alt="img-1" class="image-item">
                                     <img src="./static/img/product/product_2.JPG" alt="img-2" class="image-item">
@@ -91,7 +93,7 @@
                                     <img src="./static/img/product/product_8.JPG" alt="img-8" class="image-item">
                                     <img src="./static/img/product/product_9.JPG" alt="img-9" class="image-item">
                                 </div>
-                                <button id="next-slide" class="slide-button">right</button>
+                                <button id="next-slide" class="slide-button"><i class="fas fa-chevron-right"></i></button>
                             </div>
                             <div class="slider-scrollbar">
                                 <div class="scrollbar-track">
@@ -115,7 +117,36 @@
         </div>
     </main>
     <footer>
-        
+        <div class="footer__container">
+            <div class="footer__container__logo">
+                <img src="./static/img/logo.png" alt="footer">
+            </div>
+            <div class="footer__container__content">
+                <div class="content--left">
+                    <div class="content-item">
+                        <h1>Email</h1>
+                        <p><a href="#">kontakgroubi@gmail.com</a></p>
+                    </div>
+                    <div class="content-item">
+                        <h1>Telp</h1>
+                        <p><a href="#">(+62)888 8888 8888</a></p>
+                    </div>
+                </div>
+                <div class="content--right">
+                    <div class="content-item">
+                        <i class="fab fa-instagram"></i>
+                        <p><a href="#">kontakgroubi@gmail.com</a></p>
+                    </div>
+                    <div class="content-item">
+                        <i class="fab fa-facebook"></i>
+                        <p><a href="#">(+62)888 8888 8888</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright__bottom">
+            © 2024 Zero Inc. All rights Reserved
+        </div>
     </footer>
 </body>
 </html>

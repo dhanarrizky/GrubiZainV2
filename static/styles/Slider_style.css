@@ -15,7 +15,7 @@
     color: #fff;
     border: none;
     outline: none;
-    background: #000;
+    background: #FC8A22;
     font-size: 2.2rem;
     cursor: pointer;
     border-radius: 50%;
@@ -76,7 +76,7 @@
     position: absolute;
     height: 100%;
     width: 50%;
-    background: #000;
+    background: #FC8A22;
     border-radius: inherit;
     cursor: grab;
 }
