@@ -84,7 +84,7 @@ header .hide__bars {
   right: 0;
   display: flex;
   justify-content: center;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
   z-index: -1;
 }
 header .hide__bars ul {
@@ -147,6 +147,13 @@ main .home__container--left .left_container button a, main .home__container--rig
 main .home__container--left .left_container button:hover, main .home__container--right .left_container button:hover {
   background-color: #ffa44f;
 }
+@media screen and (max-width: 790px) {
+  main .home__container--left .left_container, main .home__container--right .left_container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
 main .home__container--left .right_container, main .home__container--right .right_container {
   height: 100%;
   display: flex;
@@ -162,11 +169,36 @@ main .home__container--left .right_container .img-container, main .home__contain
 main .home__container--left .right_container .img-container .img-1, main .home__container--right .right_container .img-container .img-1 {
   height: 500px;
 }
+@media screen and (max-width: 790px) {
+  main .home__container--left .right_container .img-container .img-1, main .home__container--right .right_container .img-container .img-1 {
+    height: 400px;
+  }
+}
 main .home__container--left .right_container .img-container .img-2, main .home__container--right .right_container .img-container .img-2 {
   height: 130px;
   position: absolute;
   bottom: -30px;
   right: -30px;
+}
+@media screen and (max-width: 790px) {
+  main .home__container--left .right_container .img-container .img-2, main .home__container--right .right_container .img-container .img-2 {
+    height: 70px;
+  }
+}
+@media screen and (max-width: 790px) {
+  main .home__container--left .right_container .img-container, main .home__container--right .right_container .img-container {
+    margin-top: 20px;
+    height: 400px;
+    width: 400px;
+  }
+  main .home__container--left .right_container .img-container .img-1, main .home__container--right .right_container .img-container .img-1 {
+    height: 400px;
+  }
+  main .home__container--left .right_container .img-container .img-2, main .home__container--right .right_container .img-container .img-2 {
+    height: 100px;
+    bottom: -30px;
+    right: -30px;
+  }
 }
 main .our-company__container--title, main .products__container--title, main .about__container--title {
   font-family: "Times New Roman", Times, serif;
@@ -244,7 +276,6 @@ main .our-company__container--content p {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  gap: 40px;
   padding: 60px 20px;
   margin-top: 100px;
 }
@@ -254,6 +285,7 @@ main .our-company__container--content p {
 .footer__container__content {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 .footer__container__content .content--left, .footer__container__content .content--right {
@@ -282,6 +314,12 @@ main .our-company__container--content p {
 .footer__container__content .content--right .content-item {
   flex-direction: row;
   align-items: center;
+}
+@media screen and (max-width: 790px) {
+  .footer__container__content .content--right .content-item {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 .copyright__bottom {
