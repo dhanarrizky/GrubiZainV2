@@ -169,21 +169,11 @@ main .home__container--left .right_container .img-container, main .home__contain
 main .home__container--left .right_container .img-container .img-1, main .home__container--right .right_container .img-container .img-1 {
   height: 500px;
 }
-@media screen and (max-width: 790px) {
-  main .home__container--left .right_container .img-container .img-1, main .home__container--right .right_container .img-container .img-1 {
-    height: 400px;
-  }
-}
 main .home__container--left .right_container .img-container .img-2, main .home__container--right .right_container .img-container .img-2 {
   height: 130px;
   position: absolute;
   bottom: -30px;
   right: -30px;
-}
-@media screen and (max-width: 790px) {
-  main .home__container--left .right_container .img-container .img-2, main .home__container--right .right_container .img-container .img-2 {
-    height: 70px;
-  }
 }
 @media screen and (max-width: 790px) {
   main .home__container--left .right_container .img-container, main .home__container--right .right_container .img-container {
@@ -198,6 +188,21 @@ main .home__container--left .right_container .img-container .img-2, main .home__
     height: 100px;
     bottom: -30px;
     right: -30px;
+  }
+}
+@media screen and (max-width: 444px) {
+  main .home__container--left .right_container .img-container, main .home__container--right .right_container .img-container {
+    height: 300px;
+    width: 300px;
+    background-color: aqua;
+  }
+  main .home__container--left .right_container .img-container .img-1, main .home__container--right .right_container .img-container .img-1 {
+    height: 300px;
+  }
+  main .home__container--left .right_container .img-container .img-2, main .home__container--right .right_container .img-container .img-2 {
+    height: 70px;
+    bottom: -20px;
+    right: -20px;
   }
 }
 main .our-company__container--title, main .products__container--title, main .about__container--title {
@@ -232,6 +237,11 @@ main .about__container--content img {
     height: 400px;
   }
 }
+@media screen and (max-width: 444px) {
+  main .about__container--content img {
+    height: 250px;
+  }
+}
 main .about__container--content p {
   font-size: large;
   padding: 10px 0;
@@ -247,53 +257,65 @@ main .products__container--content {
   align-items: center;
   justify-content: center;
 }
-main .products__container--content .slider-wrapper {
-  width: 80%;
-  overflow-x: auto;
+main .products__container--content .content-slider {
+  width: 100%;
+  height: 100%;
   position: relative;
-  z-index: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0 30px;
 }
-main .products__container--content .slider-wrapper .slide-button {
-  font-size: 27px;
-  color: white;
+main .products__container--content .content-slider .slide-button {
   background-color: #FC8A22;
+  color: white;
+  font-size: 25px;
   padding: 15px 20px;
+  position: absolute;
   border: none;
   border-radius: 50%;
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 50%;
-  transform: translateY(-50%);
+  z-index: 4;
+}
+main .products__container--content .content-slider #prev-slide {
+  left: 0px;
+}
+main .products__container--content .content-slider #next-slide {
+  right: 0px;
+}
+main .products__container--content .content-slider .slider-wrapper {
+  width: auto;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
   z-index: 3;
 }
-main .products__container--content .slider-wrapper #prev-slide {
-  left: -20px;
-}
-main .products__container--content .slider-wrapper #next-slide {
-  right: 0;
-}
-main .products__container--content .slider-wrapper::-webkit-scrollbar {
+main .products__container--content .content-slider .slider-wrapper::-webkit-scrollbar {
   display: none;
 }
-main .products__container--content .slider-wrapper .image-list {
+main .products__container--content .content-slider .slider-wrapper .image-list {
   display: flex;
   gap: 7px;
   width: 80%;
 }
-main .products__container--content .slider-wrapper .image-list .img-content {
+main .products__container--content .content-slider .slider-wrapper .image-list .img-content {
   position: relative;
   height: 300px;
   width: 200px;
   margin-right: 10px;
 }
-main .products__container--content .slider-wrapper .image-list .img-content img {
-  background-color: beige;
+main .products__container--content .content-slider .slider-wrapper .image-list .img-content img {
+  border-radius: 15px;
   height: inherit;
   width: inherit;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.3s ease;
 }
-main .products__container--content .slider-wrapper .image-list .img-content img:hover {
+main .products__container--content .content-slider .slider-wrapper .image-list .img-content img:hover {
   transform: scale(1.1);
   z-index: 4;
 }

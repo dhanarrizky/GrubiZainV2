@@ -32,6 +32,10 @@
                 @include tablet {
                     height: 400px;
                 }
+
+                @include mobile {
+                    height: 250px;
+                }
             }
 
             p {

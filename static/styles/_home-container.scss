@@ -70,10 +70,6 @@
 
                     .img-1 {
                         height: 500px;
-
-                        @include tablet {
-                            height: 400px;
-                        }
                     }
 
                     .img-2 {
@@ -81,10 +77,6 @@
                         position: absolute;
                         bottom: -30px;
                         right: -30px;
-
-                        @include tablet {
-                            height: 70px;
-                        }
                     }
                     
                     @include tablet {
@@ -104,7 +96,18 @@
                     }
 
                     @include mobile {
-
+                        height: 300px;
+                        width: 300px;
+                        background-color: aqua;
+                        .img-1 {
+                            height: 300px;
+                        }
+    
+                        .img-2 {
+                            height: 70px;
+                            bottom: -20px;
+                            right: -20px;
+                        }
                     }
                 }
             }
