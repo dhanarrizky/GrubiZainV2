@@ -4,7 +4,7 @@
     margin: 50px 0;
 
     &__container {
-        background-color: aqua;
+        // background-color: aqua;
         
         &--title {
             @extend %title-section;
@@ -14,11 +14,35 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
+            // position: relative; // Tambahkan ini
+            
             .slider-wrapper {
-                width: 95%;
+                width: 80%;
                 overflow-x: auto;
                 position: relative;
+                z-index: 1;
+
+                .slide-button {
+                    font-size: 27px;
+                    color: white;
+                    background-color: $primary;
+                    padding: 15px 20px;
+                    border: none;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: 3; // Tambahkan ini untuk memastikan tombol berada di depan konten lainnya
+
+                }
+
+                #prev-slide {
+                    left: -20px; // Beri jarak dari tepi kiri
+                }
+
+                #next-slide {
+                    right: 0; // Beri jarak dari tepi kanan
+                }
 
                 &::-webkit-scrollbar {
                     display: none;
@@ -27,24 +51,24 @@
                 .image-list {
                     display: flex;
                     gap: 7px;
+                    width: 80%;
 
-                    
                     .img-content {
                         position: relative;
                         height: 300px;
                         width: 200px;
-                        margin-right: 10px; // Menambahkan margin untuk memberi ruang saat di-hover
+                        margin-right: 10px;
 
                         img {
                             background-color: beige;
                             height: inherit;
                             width: inherit;
                             object-fit: cover;
-                            transition: transform 0.3s ease; // Menambahkan animasi untuk transisi yang lebih halus
+                            transition: transform 0.3s ease;
 
                             &:hover {
-                                transform: scale(1.1); // Menambahkan skala untuk efek hover
-                                z-index: 4; // Memastikan gambar di-hover berada di depan gambar lain
+                                transform: scale(1.1);
+                                z-index: 4;
                             }
                         }
                     }
