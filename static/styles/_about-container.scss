@@ -35,6 +35,8 @@
 
                 @include mobile {
                     height: 250px;
+                    float: none;
+                    width: 100%;
                 }
             }
 

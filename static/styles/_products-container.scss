@@ -1,7 +1,12 @@
 .products {
-    height: auto;
+    padding-top: 100px;
+    height: 100%;
     width: 100%;
     margin: 50px 0;
+
+    @include mobile  {
+        padding-top: 10px
+    }
 
     &__container {
         // background-color: aqua;
@@ -40,10 +45,17 @@
 
                 #prev-slide {
                     left: 0px;
-                }
 
+                }
+                
                 #next-slide {
                     right: 0px;
+                }
+
+                @include mobile {
+                    #prev-slide, #next-slide {
+                        display: none;
+                    }
                 }
 
                 .slider-wrapper {
@@ -63,6 +75,10 @@
                         display: flex;
                         gap: 7px;
                         width: 80%;
+                        
+                        @include mobile {
+                            width: 100%;
+                        }
     
                         .img-content {
                             position: relative;

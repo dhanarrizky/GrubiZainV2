@@ -5,6 +5,10 @@
     display: flex;
     justify-content: center;
 
+    @include mobile {
+        padding: 40px 0;
+    }
+
     &__container {
         display: flex;
         flex-wrap: wrap;
@@ -98,7 +102,7 @@
                     @include mobile {
                         height: 300px;
                         width: 300px;
-                        background-color: aqua;
+                        
                         .img-1 {
                             height: 300px;
                         }

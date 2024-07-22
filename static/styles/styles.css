@@ -102,12 +102,22 @@ main {
   margin-top: 100px;
   padding: 0 50px;
 }
+@media screen and (max-width: 444px) {
+  main {
+    padding: 0 15px;
+  }
+}
 main .home {
   height: 100%;
   width: 100%;
   padding: 100px 0;
   display: flex;
   justify-content: center;
+}
+@media screen and (max-width: 444px) {
+  main .home {
+    padding: 40px 0;
+  }
 }
 main .home__container {
   display: flex;
@@ -194,7 +204,6 @@ main .home__container--left .right_container .img-container .img-2, main .home__
   main .home__container--left .right_container .img-container, main .home__container--right .right_container .img-container {
     height: 300px;
     width: 300px;
-    background-color: aqua;
   }
   main .home__container--left .right_container .img-container .img-1, main .home__container--right .right_container .img-container .img-1 {
     height: 300px;
@@ -240,6 +249,8 @@ main .about__container--content img {
 @media screen and (max-width: 444px) {
   main .about__container--content img {
     height: 250px;
+    float: none;
+    width: 100%;
   }
 }
 main .about__container--content p {
@@ -248,9 +259,15 @@ main .about__container--content p {
   line-height: 1.5;
 }
 main .products {
-  height: auto;
+  padding-top: 100px;
+  height: 100%;
   width: 100%;
   margin: 50px 0;
+}
+@media screen and (max-width: 444px) {
+  main .products {
+    padding-top: 10px;
+  }
 }
 main .products__container--content {
   display: flex;
@@ -285,6 +302,11 @@ main .products__container--content .content-slider #prev-slide {
 main .products__container--content .content-slider #next-slide {
   right: 0px;
 }
+@media screen and (max-width: 444px) {
+  main .products__container--content .content-slider #prev-slide, main .products__container--content .content-slider #next-slide {
+    display: none;
+  }
+}
 main .products__container--content .content-slider .slider-wrapper {
   width: auto;
   height: 400px;
@@ -300,6 +322,11 @@ main .products__container--content .content-slider .slider-wrapper .image-list {
   display: flex;
   gap: 7px;
   width: 80%;
+}
+@media screen and (max-width: 444px) {
+  main .products__container--content .content-slider .slider-wrapper .image-list {
+    width: 100%;
+  }
 }
 main .products__container--content .content-slider .slider-wrapper .image-list .img-content {
   position: relative;
@@ -320,8 +347,14 @@ main .products__container--content .content-slider .slider-wrapper .image-list .
   z-index: 4;
 }
 main .our-company {
+  padding-top: 100px;
   height: 100%;
   width: 100%;
+}
+@media screen and (max-width: 444px) {
+  main .our-company {
+    padding-top: 10px;
+  }
 }
 main .our-company__container--content {
   padding: 10px 0;

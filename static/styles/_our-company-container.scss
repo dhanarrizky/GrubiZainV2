@@ -1,7 +1,12 @@
 .our-company {
+    padding-top: 100px;
     height: 100%;
     width: 100%;
     // background-color: aqua;
+
+    @include mobile {
+        padding-top: 10px
+    }
 
     &__container {
         &--title {

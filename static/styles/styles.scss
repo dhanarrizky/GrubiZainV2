@@ -23,6 +23,10 @@ main {
     margin-top: 100px; 
     padding: 0 50px;
 
+    @include mobile {
+        padding: 0 15px;
+    }
+
     @import 'home-container';
     @import 'about-container';
     @import 'products-container';
