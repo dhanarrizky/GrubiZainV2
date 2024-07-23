@@ -51,3 +51,39 @@ function checkWidth() {
 
 window.addEventListener('resize', checkWidth);
 checkWidth();
+
+
+// product scrolling
+
+const imgLists = document.querySelectorAll('.image-list .img-content img');
+const imgListClient = document.querySelector('.image-list');
+const prevBtn = document.querySelector('#prev-slide');
+const nextBtn = document.querySelector('#next-slide');
+
+imgLists.forEach(i => {
+    console.log(i.getAttribute('src'));
+});
+
+console.log('client width : ', imgListClient.clientWidth);
+console.log('scroll width : ', imgListClient.scrollWidth);
+
+let index = 0;
+let maxIndex = Math.ceil(imgListClient.scrollWidth / imgListClient.clientWidth);
+
+nextBtn.addEventListener('click', () => {
+    if (index < maxIndex) {
+        index++;
+        imgListClient.scrollBy({left: imgListClient.clientWidth, behavior: "smooth"});
+    }
+    console.log('Index:', index);
+    console.log('Max Index:', maxIndex);
+});
+
+prevBtn.addEventListener('click', () => {
+    if (index > 1) {
+        index--;
+        imgListClient.scrollBy({left: -imgListClient.clientWidth, behavior: "smooth"});
+    }
+    console.log('Index:', index);
+    console.log('Max Index:', maxIndex);
+});
