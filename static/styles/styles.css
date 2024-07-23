@@ -197,7 +197,7 @@ main .home__container--left .right_container .img-container .img-2, main .home__
   main .home__container--left .right_container .img-container .img-2, main .home__container--right .right_container .img-container .img-2 {
     height: 100px;
     bottom: -30px;
-    right: -30px;
+    right: -20px;
   }
 }
 @media screen and (max-width: 444px) {
